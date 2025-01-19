@@ -1,0 +1,208 @@
+{% load static %}
+<aside class="main-sidebar sidebar-light-blue elevation-4">
+    <!-- Brand Logo -->
+    <a href="{{ admin_home }}" class="brand-link">
+      <img src="{% static 'dist/img/MainLogo.png' %}" alt="LMS Logo" class="brand-image "
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">Mokaleng IT LMS</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar ">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{% static 'dist/img/SystemAdminDefault.jpg' %}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="{% url 'admin_profile' %}" class="d-block">{{ user.username }}</a>
+        </div>
+      </div>
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+          {% url 'add_staff' as add_staff %}
+          {% url 'manage_staff' as manage_staff %}
+          {% url 'edit_staff' as edit_staff %}
+          {% url 'staff_feedback_data' as staff_feedback_data %}
+          {% url 'admin_send_notification_staff' as admin_send_notification_staff %}
+          {% url 'add_course' as add_course %}
+          {% url 'manage_course' as manage_course %}
+          {% url 'manage_course_sessions' as manage_course_sessions %}
+          {% url 'add_subject' as add_subject %}
+          {% url 'manage_subject' as manage_subject %}
+          {% url 'add_student' as add_student %}
+          {% url 'student_feedback_data' as student_feedback_data %}
+          {% url 'view_attendance_report' as view_attendance_report %}
+          {% url 'manage_student' as manage_student %}
+          {% url 'admin_send_notification_student' as admin_send_notification_student %}
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <!-- Home -->
+              <li class="nav-item has-treeview {% if request.path == admin_home%} menu-open {% endif %}">
+                  {% url 'admin_home' as admin_home %}
+                  <a href="{{ admin_home }}" class="nav-link {% if request.path == admin_home %} active {% endif %}">
+                      <i class="nav-icon fas fa-users"></i>
+                      <p>
+                          Home
+                          <i class="right fas fa-angle-left"></i>
+                      </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                          {% url 'admin_home' as admin_home %}
+                          <a href="{{ admin_home }}" class="nav-link {% if request.path == admin_home %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>System Dashboard</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          {% url 'logout_user' as logout_user %}
+                          <a href="{{ logout_user }}" class="nav-link">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Log Out</p>
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+              <!-- Staff Management -->
+              <li class="nav-item has-treeview {% if request.path == add_staff or request.path == manage_staff or request.path == edit_staff or request.path == staff_feedback_data or request.path == admin_send_notification_staff %} menu-open {% endif %}">
+                  <a href="#" class="nav-link {% if request.path == add_staff or request.path == manage_staff or request.path == edit_staff or request.path == staff_feedback_data or request.path == admin_send_notification_staff %} active {% endif %}">
+                      <i class="nav-icon fas fa-users"></i>
+                      <p>
+                          Staff Management
+                          <i class="right fas fa-angle-left"></i>
+                      </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                          {% url 'add_staff' as add_staff %}
+                          <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Add Staff</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          {% url 'manage_staff' as manage_staff %}
+                          <a href="{{ manage_staff }}" class="nav-link {% if request.path == manage_staff %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Manage Staff</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          {% url 'staff_feedback_data' as staff_feedback_data %}
+                          <a href="{{ staff_feedback_data }}" class="nav-link {% if request.path == staff_feedback_data %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Staff Feedback</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          {% url 'admin_send_notification_staff' as admin_send_notification_staff %}
+                          <a href="{{ admin_send_notification_staff }}" class="nav-link {% if request.path == admin_send_notification_staff %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Send Staff Notification</p>
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+              <!-- Course Management -->
+              <li class="nav-item has-treeview {% if request.path == add_course or request.path == manage_course or request.path == edit_course or request.path == manage_course_sessions %} menu-open {% endif %}">
+                  <a href="#" class="nav-link {% if request.path == add_course or request.path == manage_course or request.path == edit_course or request.path == manage_course_sessions %} active {% endif %}">
+                      <i class="nav-icon fas fa-university"></i>
+                      <p>
+                          Course Management
+                          <i class="right fas fa-angle-left"></i>
+                      </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                          <a href="{{ add_course }}" class="nav-link {% if request.path == add_course %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Add Course</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ manage_course }}" class="nav-link {% if request.path == manage_course %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Manage Course</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ manage_course_sessions }}" class="nav-link {% if request.path == manage_course_sessions %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Manage Course Sessions</p>
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+              <!-- Subject Management -->
+              <li class="nav-item has-treeview {% if request.path == add_subject or request.path == manage_subject or request.path == edit_subject %} menu-open {% endif %}">
+                  <a href="#" class="nav-link {% if request.path == add_subject or request.path == manage_subject or request.path == edit_subject %} active {% endif %}">
+                      <i class="nav-icon fas fa-book"></i>
+                      <p>
+                          Subject Management
+                          <i class="right fas fa-angle-left"></i>
+                      </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                          <a href="{{ add_subject }}" class="nav-link {% if request.path == add_subject %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Add Subject</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ manage_subject }}" class="nav-link {% if request.path == manage_subject %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Manage Subject</p>
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+              <!-- Student Management -->
+              <li class="nav-item has-treeview {% if request.path == add_student or request.path == manage_student or request.path == edit_student or request.path == student_feedback_data or request.path == view_attendance_report or request.path == admin_send_notification_student %} menu-open {% endif %}">
+                  <a href="#" class="nav-link {% if request.path == add_student or request.path == manage_student or request.path == edit_student or request.path == student_feedback_data or request.path == view_attendance_report or request.path == admin_send_notification_student %} active {% endif %}">
+                      <i class="nav-icon fas fa-graduation-cap"></i>
+                      <p>
+                          Student Management
+                          <i class="right fas fa-angle-left"></i>
+                      </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                          <a href="{{ add_student }}" class="nav-link {% if request.path == add_student %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Add Student</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ manage_student }}" class="nav-link {% if request.path == manage_student %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Manage Students</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ student_feedback_data }}" class="nav-link {% if request.path == student_feedback_data %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Student Feedback</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ view_attendance_report }}" class="nav-link {% if request.path == view_attendance_report %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>View Attendance Report</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ admin_send_notification_student }}" class="nav-link {% if request.path == admin_send_notification_student %} active {% endif %}">
+                              <i class="nav-icon fas fa-chevron-right"></i>
+                              <p>Send Student Notification</p>
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </nav>
+
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

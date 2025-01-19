@@ -1,0 +1,84 @@
+{% extends 'sysadmin_components/base_component.html' %}
+{% load static %}
+{% block page_title %}
+Add Student
+{% endblock page_title %}
+{% block main_content %}
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+      <div class="card card-indigo">
+              <div class="card-header">
+                <h3 class="card-title">Add Student</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+                {% url 'add_student_save' as action_path %}
+                {% include 'sysadmin_components/form_component.html' with messages=messages form=form action_path=action_path button_text="Add Student" %}
+            </div>
+  </div>
+</section>
+<!-- /.content -->
+{% endblock main_content %}
+{% block custom_js %}
+<script>
+    $(document).ready(function(){
+        $("#id_email").keyup(function(){
+            var email = $(this).val();
+            if(email!=""){
+                $.ajax({
+                    url: '{% url 'check_email_exist' %}',
+                    type: 'POST',
+                    data: {email:email}
+                })
+                .done(function(response){
+                    console.log(response);
+                    if(response == "True"){
+                        $(".email_error").remove();
+                        $("<span class='email_error' style='padding: 5px; color: red; font-weight: bold;'>Email Is Not Available</span>").insertAfter("#id_email")
+                    }
+                    else{
+                        $(".email_error").remove();
+                        $("<span class='email_error' style='padding: 5px; color: green; font-weight: bold;'>Email Available</span>").insertAfter("#id_email")
+                    }
+                })
+                .fail(function(){
+                    console.log("failed");
+                })
+            }
+            else{
+                $(".email_error").remove();
+            }
+
+        });
+        $("#id_username").keyup(function(){
+            var username = $(this).val();
+            if(username!=""){
+                $.ajax({
+                    url: '{% url 'check_username_exist' %}',
+                    type: 'POST',
+                    data: {username:username}
+                })
+                .done(function(response){
+                    console.log(response);
+                    if(response == "True"){
+                        $(".username_error").remove();
+                        $("<span class='username_error' style='padding: 5px; color: red; font-weight: bold;'>Username Is Not Available</span>").insertAfter("#id_username")
+                    }
+                    else{
+                        $(".username_error").remove();
+                        $("<span class='username_error' style='padding: 5px; color: green; font-weight: bold;'>Username Available</span>").insertAfter("#id_username")
+                    }
+                })
+                .fail(function(){
+                    console.log("failed");
+                })
+            }
+            else{
+                $(".username_error").remove();
+            }
+
+        });
+    });
+</script>
+{% endblock %}

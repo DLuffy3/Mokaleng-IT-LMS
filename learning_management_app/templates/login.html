@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+            <title> Mokaleng IT LMS | Login </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Premium Bootstrap 5 Landing Page Template">
+        <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
+        <meta name="author" content="Rockitartproductions">
+        <meta name="email" content="rockitartproductions@gmail.com">
+        <meta name="website" content="https://rockitartproductions.com">
+        <meta name="Version" content="v4.7.0">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{% static 'assets/images/fav-icon/icon.png' %}">
+        <!-- Css -->
+        <link href="{% static 'login/css/bootstrap.min.css' %}" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css">
+        <link href="{% static 'login/css/materialdesignicons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'login/css/style.min.css' %}" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css">
+	    <!-- Main Style CSS -->
+	    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" type="text/css" media="all">
+    </head>
+
+    <body>
+
+        <div class="loader_bg">
+	    </div>
+        <section class="bg-home d-flex align-items-center position-relative" style="background: url('{% static 'login/images/login-page.jpg' %}') center;">
+            <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card form-signin border-0 p-4 rounded shadow">
+                            <form action="/doLogin" method="post" autofill="off">
+                                <h7 class="card-title"><a href="{% url 'show_main_page' %}">Home</a></h7>
+                                {% csrf_token %}
+                                <div class="text-center mb-4">
+                                    <a class="text-primary h4 text-uppercase">Welcome!</a>
+                                </div>
+                                <h5 class="card-title">Please sign</h5>
+                            
+                                <div class="form-floating mb-2">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username" autocomplete="new-username">
+                                    <label for="floatingInput">Username</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" autocomplete="new-password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+                            
+                                <div class="d-flex justify-content-between">
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                                        </div>
+                                    </div>
+                                    <p class="forgot-pass mb-0"><a href="{% url 'password_reset' %}" class="text-dark fw-semibold">Reset password ?</a></p>
+                                </div>
+                
+                                <button class="btn btn-primary w-100" type="submit">Log in</button>
+
+                                <div class="col-12 text-center mt-3">
+                                    <p class="mb-0 mt-3"><span class="text-dark me-2">Don't have an account ?</span> <a href="auth-bs-signup.html" class="text-dark fw-semibold">Sign Up</a></p>
+                                </div><!--end col-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'login/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- jquery js -->
+	<script src="{% static 'assets/js/vendor/jquery-3.6.2.min.js' %}"></script>
+
+	<!-- wow js -->
+	<script src="{% static 'assets/js/wow.min.js' %}"></script>
+
+	<!-- jquery meanmenu js -->
+	<script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+
+	<!-- theme js -->
+	<script src="{% static 'assets/js/theme.js' %}"></script>
+
+    </body>
+
+</html>
