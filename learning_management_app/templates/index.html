@@ -1,0 +1,816 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> Mokaleng IT LMS </title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="{% static 'assets/images/fav-icon/icon.png' %}">
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css" media="all">
+	<!-- carousel CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css" media="all">
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" type="text/css" media="all">
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" type="text/css" media="all">
+	<!-- font-flaticon CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}" type="text/css" media="all">
+	<!-- theme-default CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/theme-default.css' %}" type="text/css" media="all">
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}" type="text/css" media="all">
+	<!-- transitions CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/owl.transitions.css' %}" type="text/css" media="all">
+	<!-- venobox CSS -->
+	<link rel="stylesheet" href="{% static 'venobox/venobox.css' %}" type="text/css" media="all">
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap-icons.css' %}" type="text/css" media="all">
+	<!-- Main Style CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}" type="text/css" media="all">
+	<!-- Dropdown CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/dropdown.css' %}" type="text/css" media="all">
+	<!-- responsive CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" type="text/css" media="all">
+	<!-- modernizr js -->
+	<script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+</head>
+
+<body>
+	<!-- loder -->
+	<div class="loader_bg">
+	</div>
+
+	<!--==================================================-->
+	<!-- Start Header Area -->
+	<!--==================================================-->
+	<header class="header-area" id="sticky-header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-2">
+					<div class="logo">
+						<a href="index.html"><img src="{% static 'assets/images/mokaleng-it-header-logo.png' %}" alt="mokaleng-it-lms"></a>
+					</div>
+				</div>
+				<div class="col-lg-10">
+					<div class="header-menu">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#courses">Courses</a></li>
+							<li><a href="#testi">Testimonial</a></li>
+							<li><a href="contact.html">Contacts</a></li>
+						</ul>
+						<div class="main-btn">
+							<a href="{% url 'show_login' %}" class="nest-btn">
+								<span class="nest-btn__shape"></span>
+								<span class="nest-btn__shape"></span>
+								<span class="nest-btn__shape"></span>
+								<span class="nest-btn__shape"></span>
+								<span class="nest-btn__text">LOGIN</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- estudy Mobile Menu Area -->
+	<div class="mobile-menu-area sticky-menu" id="navbar">
+		<div class="mobile-menu">
+			<div class="mobile-logo">
+				<a href="index.html"><img src="{% static 'assets/images/logo.png' %}" alt=""></a>
+			</div>
+			<div class="side-menu-info">
+				<div class="sidebar-menu">
+					<a class="navSidebar-button" href="#"><i class="bi bi-justify-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Header Area -->
+	<!--==================================================-->
+
+	<!--==================================================-->
+	<!-- Start Banner Area -->
+	<!--==================================================-->
+	<div class="slider_list owl-carousel">
+		<div class="slider-area d-flex align-items-center">
+			<div class="slider-shape-area">
+				<div class="baner-shape2 bounce-animate">
+					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
+				</div>
+				<div class="baner-shape3 watermark-animate">
+					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
+				</div>
+				<div class="baner-shape4 bounce-animate4">
+					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
+				</div>
+			</div>
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="slider-content">
+							<div class="slider-sub-title">
+								<h4>100% Satisfaction</h4>
+							</div>
+							<div class="slider-main-title">
+								<h1>Learn Advanced IT Skills With Our Amazing Courses</h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="slider-thumb">
+							<img src="{% static 'assets/images/slider/thumb.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-area d-flex align-items-center">
+			<div class="slider-shape-area">
+				<div class="baner-shape1 bounce-animate">
+					<img src="{% static 'assets/images/slider/slider-shape.png' %}" alt="">
+				</div>
+				<div class="baner-shape2 bounce-animate">
+					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
+				</div>
+				<div class="baner-shape3 watermark-animate">
+					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
+				</div>
+				<div class="baner-shape4 bounce-animate4">
+					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
+				</div>
+			</div>
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="slider-content">
+							<div class="slider-sub-title">
+								<h4>Apply Now!</h4>
+							</div>
+							<div class="slider-main-title">
+								<h1>Start Your Journey Today!</h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="slider-thumb">
+							<img src="{% static 'assets/images/slider/slider-thumb-2.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Banner Area -->
+	<!--==================================================-->
+
+
+	<!--==================================================-->
+	<!-- Start Courses  Area -->
+	<!--==================================================-->
+	<div class="catagories-area" id="courses">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+						<div class="section-title-shape">
+							<img src="{% static 'assets/images/resource/section-shape.png' %}" alt="">
+						</div>
+						<div class="section-sub-title">
+							<h4>Browse</h4>
+						</div>
+						<div class="section-main-title">
+							<h2>Our Courses</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="catagories_list owl-carousel">
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/System Development.png' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">System Development</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/Tech Support.jpg' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">Technical Support</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/System Support.png' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">System Support</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/End USer Computing.png' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">End User</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/PL 600.png' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">PL-600</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/PL 600.png' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">PL-200</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/MCSE.jpg' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">MCSE</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/MCSA.jpg' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">MCSA</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/CompTIA A+.png' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">CompuTIA A+</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+							<div class="catagories-thumb">
+								<img src="{% static 'assets/images/catagories/CompTIA N+.png' %}" alt="">
+								<div class="catagories-text">
+									<h4>Explore</h4>
+								</div>
+							</div>
+							<div class="catagories-title">
+								<h4><a href="course-details.html">CompuTIA N+</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Catagories Area -->
+	<!--==================================================-->
+
+	<!--==================================================-->
+	<!-- Start Consult  Area -->
+	<!--==================================================-->
+	<div class="help-area">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 col-md-12">
+					<div class="help-sub-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+						<h4>AMAZING LEARNING PLATFORM</h4>
+					</div>
+					<div class="help-main-title wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+						<h2>One Platform With Many</h2>
+						<h2>Courses For You</h2>
+					</div>
+					<div class="help-list wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+						<span><i class="bi bi-check"></i> Easy Online Learning Platform</span>
+						<span><i class="bi bi-check"></i> Excellent IT Fundamental Courses</span>
+						<span><i class="bi bi-check"></i> Friendly Enviroments & Teachers</span>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="help-items-box wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
+						<div class="help-icon-thumb">
+							<img src="{% static 'assets/images/resource/help-icon.png' %}" alt="">
+						</div>
+						<div class="help-items-content">
+							<h6>Need Help? Call us</h6>
+							<h4><a href="tel:+74 81 742 8404">081 742 8404</a></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Help  Area -->
+	<!--==================================================-->
+
+	<!--==================================================-->
+	<!-- Start Testimonial Area -->
+	<!--==================================================-->
+	<div class="testimonial-area" id="testi">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center wow fadeInUp animated" data-wow-delay="100ms">
+						<div class="section-title-shape">
+							<img src="{% static 'assets/images/resource/section-shape.png' %}" alt="">
+						</div>
+						<div class="section-sub-title">
+							<h4>Clients About Us</h4>
+						</div>
+						<div class="section-main-title">
+							<h2>What Our Students Say</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<div class="testi-single-box wow fadeInUp animated" data-wow-delay="200ms">
+						<div class="testi-thumb">
+							<img src="{% static 'assets/images/testimonial/mokaleng-large-logo.png' %}" alt="">
+							<div class="testi-content">
+								<h4>Hazel Phillips</h4>
+								<span>System Support</span>
+								<p>Before joining, I had basic computer skills but lacked formal training in IT.
+									I was eager to gain practical experience and build a career in systems support.
+									The learnership provided comprehensive training in IT systems, networking, and
+									troubleshooting. I gained hands-on experience with industry-standard tools and software,
+									and our mentors offered invaluable guidance and support.<br>
+									I highly recommend the Systems Support Learnership to anyone seeking a career in IT.
+									The program's practical approach and industry-recognized certifications have empowered me to succeed in this field.</p>
+							</div>
+						</div>
+					</div>
+					<div class="testi-items-box two wow fadeInUp animated" data-wow-delay="400ms">
+						<div class="testi-shape">
+							<img src="{% static 'assets/images/testimonial/mokaleng-small-logo.png' %}" alt="">
+						</div>
+						<div class="testi-icon">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="testi-item-content">
+							<h4>MJ Mogapi</h4>
+							<span>System Support</span>
+							<p>Dear MokalengIT<br>
+								I'm a33 years old female residing in township named ITSOSENG in North West province.
+								I'm a very happy student that enrolled in your company as a system supporter and
+								the experience was so good as I have gained lot of experience in the field of IT,
+								thank you for giving me such experience in both theory and practical.<br>
+								I am now exposed to IT and it all came from the Mokaleng IT I am very grateful for
+								the experience and I am now more interested in this field than I ever was before, thank you very much.
+								Hope you continue to empower our South African youth.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="testi-items-box wow fadeInUp animated" data-wow-delay="600ms">
+						<div class="testi-shape">
+							<img src="{% static 'assets/images/testimonial/mokaleng-small-logo.png' %}" alt="">
+						</div>
+						<div class="testi-icon">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="testi-item-content">
+							<h4>Tshegofatso Millicent Motlhaoleng</h4>
+							<span>Technical Support.</span>
+							<p>Dear Donald,<br>
+								I am eager to contribute my enthusiasm and dedication to the technical support.
+								The chance to work alongside experienced professionals and engage in hand-on learning is an opportunity I greatly value.
+								I have gained a solid foundation in installing windows and how to configure email on
+								Microsoft outlook cat 5 and cat 6 cable wire sequence making a cable work and the types of software.<br>
+								What excites me most about Mokaleng IT is its commitment to innovation and its collaborative work environment.
+								I am confident that the exposure to real-world project and the mentorship offered during the  learnership will
+								enhance my skills and contribute to my professional growth.<br>
+								In conclusion, the programme has exceed my expectation and it has also developed my skills in team work expectation.
+							</p>
+						</div>
+					</div>
+					<div class="testi-single-box wow fadeInUp animated" data-wow-delay="800ms">
+						<div class="testi-thumb">
+							<img src="{% static 'assets/images/testimonial/mokaleng-large-logo.png' %}" alt="">
+							<div class="testi-content">
+								<h4>K.F Mogorosi</h4>
+								<span>System Support</span>
+								<p>I recently completed the Mokaleng IT System Support Program at
+									Ponelopele Primary School in Itsoseng and I am thrilled to share transformative experience.<br>
+									Over the past three months, I gained extensive knowledge in computer hardware and
+									software, different types of windows server and its configurations, storage devices used in
+									computers.
+									The program’s hands on training and mentorship were invaluable, allowing me to apply
+									theoretical concepts to real- world scenarios.
+									I highly recommend this program to anyone seeking to launch or advance their IT career.<br>
+									The instructors were knowledgeable, supportive and inspiring, and the learning
+									environment was collaborative and stimulating.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="testi-items-box two wow fadeInUp animated" data-wow-delay="1200ms">
+						<div class="testi-shape">
+							<img src="{% static 'assets/images/testimonial/mokaleng-small-logo.png' %}" alt="">
+						</div>
+						<div class="testi-icon">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-empty"></i>
+						</div>
+						<div class="testi-item-content">
+							<h4>Ezethu Penelope Makaluza</h4>
+								<span>System Support</span>
+								<p>I Attend At MOKALENG IT Training Program, And It Is A life Changing Opportunity.
+									Our Instructors Patience And Expertise Made Complex Concepts Accessible.
+									My Positive Experiences At MOKALENG IT, Were Knowledgeable And Supportive Teachers Who Made Learning Enjoyable Not
+									Forgetting The Community And Friendly Fellow Students Who Created A Productive Environment. While On Training,
+									Practical Exercises Are Preparing Me For Real World.<br>
+									I Would Rate MOKALENG IT 4/5, For Enhanced IT Skills and, Problem Solving Skills,
+									I Highly Recommend It to Students Seeking Practical IT Skills.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Testimonial Area -->
+	<!--==================================================-->
+
+	<!--==================================================-->
+	<!-- Start Registration Area -->
+	<!--==================================================-->
+	<div class="registration-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<div class="section-title wow fadeInUp animated" data-wow-delay="100ms">
+						<div class="section-sub-title registration">
+							<h4>Apply Now!</h4>
+						</div>
+						<div class="section-main-title registration">
+							<h2>Register and apply now and gain access to advanced IT Courses.</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Registration Area -->
+	<!--==================================================-->
+
+	<!--==================================================-->
+	<!-- Start Brand Area -->
+	<!--==================================================-->
+	<div class="container fadeInUp animated" data-wow-delay="100ms">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="brand_list owl-carousel">
+					<div class="col-lg-12">
+						<div class="brand-itmes">
+							<div class="brand-thumb inner">
+								<img src="{% static 'assets/images/brand/comptia-logo.png' %}" alt="">
+							</div>
+							<div class="brand-thumb inner2">
+								<img src="{% static 'assets/images/brand/mokaleng-logo.png' %}" alt="">
+							</div>
+							<div class="brand-thumb inner">
+								<img src="{% static 'assets/images/brand/microsoft-logo.png' %}" alt="">
+							</div>
+							<div class="brand-thumb inner">
+								<img src="{% static 'assets/images/brand/mictseta-logo.png' %}" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Brand Area -->
+	<!--==================================================-->
+
+	<!--==================================================-->
+	<!-- Start Sidebar Area -->
+	<!--==================================================-->
+	<div class="sidebar-group info-group">
+		<div class="sidebar-widget">
+			<div class="sidebar-widget-container">
+				<div class="widget-heading">
+					<a href="#" class="close-side-widget">
+						<i class="bi bi-x-lg"></i>
+					</a>
+				</div>
+				<div class="sidebar-textwidget">
+					<div class="sidebar-info-contents">
+						<div class="content-inner">
+							<div class="sidebar-logo">
+								<a href="index.html"><img src="{% static 'assets/images/logo.png' %}" alt="logo"></a>
+							</div>
+							<div class="sidebar-widget-menu">
+								<ul>
+									<li class="dropdown"><a href="index.html" data-toggle="dropdown">Home</a></li>
+									<li class="dropdown"><a href="#catagories" data-toggle="dropdown">Catagories</a></li>
+									<li class="dropdown"><a href="#course" data-toggle="dropdown">Courses</a></li>
+									<li class="dropdown"><a href="#team" data-toggle="dropdown">Team</a></li>
+									<li class="dropdown"><a href="#video" data-toggle="dropdown">Video</a></li>
+									<li class="dropdown"><a href="#testi" data-toggle="dropdown">Testimonial</a></li>
+									<li class="dropdown"><a href="#blog" data-toggle="dropdown">Blog</a></li>
+									<li class="dropdown"><a href="contact.html" data-toggle="dropdown">Contacts</a></li>
+								</ul>
+							</div>
+							<div class="contact-info">
+								<h2>Contact Info</h2>
+								<ul class="list-style-one">
+									<li><i class="bi bi-geo-alt-fill"></i>6391 Elgin St. Celina, Delaware</li>
+									<li><i class="bi bi-telephone-fill"></i>(+001) 123-456-789</li>
+									<li><i class="bi bi-envelope"></i> info@example.com</li>
+									<li><i class="bi bi-alarm-fill"></i> Week Days: 08.00 to 10.00
+									</li>
+								</ul>
+							</div>
+							<ul class="social-box">
+								<li class="facebook"><a href="#" class="fab fa-facebook-f"></a></li>
+								<li class="twitter"><a href="#" class="fab fa-instagram"></a></li>
+								<li class="linkedin"><a href="#" class="fab fa-twitter"></a></li>
+								<li class="instagram"><a href="#" class="fab fa-pinterest-p"></a></li>
+								<li class="youtube"><a href="#" class="fab fa-linkedin-in"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Sidebar Area -->
+	<!--==================================================-->
+
+	<!--==================================================-->
+	<!-- Start Footer Area -->
+	<!--==================================================-->
+	<div class="footer-area">
+		<div class="container">
+			<div class="footer-shape1 bounce-animate-slow">
+				<img src="{% static 'assets/images/footer/footer-shape-1.png' %}" alt="">
+			</div>
+			<div class="footer-shape2 bounce-animate-slow">
+				<img src="{% static 'assets/images/footer/footer-shape-2.png' %}" alt="">
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+						<div class="footer-wiget-logo">
+							<img src="{% static 'assets/images/white-logo.png' %}" alt="">
+						</div>
+						<div class="footer-wiget-text">
+							<h4>Empowering learning journeys, our LMS brings educators and learners together in a dynamic, accessible, and interactive platform.</h4>
+						</div>
+						<div class="footer-socilal-title">
+							<h4>Follow us on</h4>
+						</div>
+						<div class="footer-social">
+							<ul>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+						<div class="footer-wiget-title">
+							<h4>About Us</h4>
+						</div>
+						<div class="footer-wiget-menu">
+							<ul>
+								<li><a href="https://mokalengit.co.za/" target="_blank">Mokaleng IT Website</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+						<div class="footer-wiget-title">
+							<h4>Get In Touch</h4>
+						</div>
+						<div class="footer-wiget-touch">
+							<ul>
+								<li>
+									<div class="icon">
+										<i class="bi bi-geo-alt"></i>
+									</div>
+									<div class="title">
+										<h6>Address</h6>
+									</div>
+									<div class="adress">
+										<a href="#">Eastern Cape, South Africa </a>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="bi bi-telephone-plus-fill"></i>
+									</div>
+									<div class="title">
+										<h6>Phone</h6>
+									</div>
+									<div class="adress">
+										<a href="tel:+74 81 742 8404">081 742 8404</a>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="bi bi-envelope"></i>
+									</div>
+									<div class="title">
+										<h6>Email</h6>
+									</div>
+									<div class="adress">
+										<a href="mailto:admin@mokalengit.com" class="link">admin@mokalengit.com</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center mt-90">
+				<div class="col-lg-6 col-md-12">
+					<div class="copyright-text">
+						<p>© 2024 - 2025 | Alrights reserved by <a href="https://mokalengit.com/">MokalengIT</a></p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="footer-privacy-menu">
+						<ul>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms & Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Footer Area -->
+	<!--==================================================-->
+
+
+	<!--==================================================-->
+	<!-- Start scrollup section Area -->
+	<!--==================================================-->
+	<!-- scrollup section -->
+	<div class="prgoress_scrollup">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+		</svg>
+	</div>
+
+	<!--==================================================-->
+	<!-- End scrollup section Area -->
+	<!--==================================================-->
+
+
+	<!-- jquery js -->
+	<script src="{% static 'assets/js/vendor/jquery-3.6.2.min.js' %}"></script>
+
+	<script src="{% static 'assets/js/popper.min.js' %}"></script>
+
+	<!-- bootstrap js -->
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+	<!-- carousel js -->
+	<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+	<!-- counterup js -->
+	<script src="{% static 'assets/images/fav-icon/icon.png' %}"></script>
+
+	<!-- waypoints js -->
+	<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+
+	<!-- wow js -->
+	<script src="{% static 'assets/js/wow.min.js' %}"></script>
+
+	<!-- imagesloaded js -->
+	<script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+
+	<!-- venobox js -->
+	<script src="{% static 'venobox/venobox.js' %}"></script>
+
+	<!--  animated-text js -->
+	<script src="{% static 'assets/js/animated-text.js' %}"></script>
+
+	<!-- venobox min js -->
+	<script src="{% static 'venobox/venobox.min.js' %}"></script>
+
+	<!-- isotope js -->
+	<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+
+	<!-- jquery meanmenu js -->
+	<script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+
+	<!-- jquery scrollup js -->
+	<script src="{% static 'assets/js/jquery.scrollUp.js' %}"></script>
+
+	<!-- Slick Slider -->
+	<script src="{% static 'assets/slick/slick.min.js' %}"></script>
+
+	<script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+	<!-- jquery js -->
+
+	<!-- ragrslider js -->
+	<script src="{% static 'assets/js/rangeslider.js' %}"></script>
+
+	<!-- ragrslider js -->
+	<script src="{% static 'assets/js/mixitup.min.js' %}"></script>
+
+	<!-- theme js -->
+	<script src="{% static 'assets/js/theme.js' %}"></script>
+
+	<!-- scroll js -->
+	<script src="{% static 'assets/js/script.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn learning_management_system.wsgi:application
