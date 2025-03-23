@@ -43,11 +43,11 @@ class AddStudentForm(forms.Form):
 
         course = forms.ChoiceField(label="Course", choices=course_list,
                                    widget=forms.Select(attrs={"class": "form-control"}))
-        course_session_id = forms.ChoiceField(label="Course Session Date", choices=session_list,
+        session = forms.ChoiceField(label="Course Session Date", choices=session_list,
                                               widget=forms.Select(attrs={"class": "form-control"}))
         gender = forms.ChoiceField(label="Gender", choices=gender_choice,
                                    widget=forms.Select(attrs={"class": "form-control"}))
-        profile_pic = forms.FileField(label="Profile Pic", max_length=50,
+        profile_pic = forms.FileField(label="Profile Pic", max_length=100,
                                       widget=forms.FileInput(attrs={"class": "form-control"}))
 
 
