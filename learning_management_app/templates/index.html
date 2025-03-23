@@ -80,17 +80,27 @@
 
 	<!-- estudy Mobile Menu Area -->
 	<div class="mobile-menu-area sticky-menu" id="navbar">
-		<div class="mobile-menu">
+		<div class="mobile-menu d-flex align-items-center justify-content-between">
+			<!-- Logo Locked to Left -->
 			<div class="mobile-logo">
-				<a href="index.html"><img src="{% static 'assets/images/logo.png' %}" alt=""></a>
+				<a href="#">
+					<img src="{% static 'assets/images/mokaleng-it-header-logo.png' %}" alt="Mokaleng IT" class="nav-logo">
+				</a>
 			</div>
+
+			<!-- Login Button to the Right -->
 			<div class="side-menu-info">
 				<div class="sidebar-menu">
-					<a class="navSidebar-button" href="#"><i class="bi bi-justify-right"></i></a>
+					<a class="navSidebar-button" href="{% url 'show_login' %}">
+						<span class="icon-circle">
+							<i class="bi bi-person-check"></i>
+						</span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!--==================================================-->
 	<!-- End Header Area -->
 	<!--==================================================-->
@@ -134,7 +144,7 @@
 		<div class="slider-area d-flex align-items-center">
 			<div class="slider-shape-area">
 				<div class="baner-shape1 bounce-animate">
-					<img src="{% static 'assets/images/slider/slider-shape.png' %}" alt="">
+					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
 				</div>
 				<div class="baner-shape2 bounce-animate">
 					<img src="{% static 'assets/images/slider/slider-shape2.png' %}" alt="">
@@ -567,62 +577,6 @@
 	</div>
 	<!--==================================================-->
 	<!-- End Brand Area -->
-	<!--==================================================-->
-
-	<!--==================================================-->
-	<!-- Start Sidebar Area -->
-	<!--==================================================-->
-	<div class="sidebar-group info-group">
-		<div class="sidebar-widget">
-			<div class="sidebar-widget-container">
-				<div class="widget-heading">
-					<a href="#" class="close-side-widget">
-						<i class="bi bi-x-lg"></i>
-					</a>
-				</div>
-				<div class="sidebar-textwidget">
-					<div class="sidebar-info-contents">
-						<div class="content-inner">
-							<div class="sidebar-logo">
-								<a href="index.html"><img src="{% static 'assets/images/logo.png' %}" alt="logo"></a>
-							</div>
-							<div class="sidebar-widget-menu">
-								<ul>
-									<li class="dropdown"><a href="index.html" data-toggle="dropdown">Home</a></li>
-									<li class="dropdown"><a href="#catagories" data-toggle="dropdown">Catagories</a></li>
-									<li class="dropdown"><a href="#course" data-toggle="dropdown">Courses</a></li>
-									<li class="dropdown"><a href="#team" data-toggle="dropdown">Team</a></li>
-									<li class="dropdown"><a href="#video" data-toggle="dropdown">Video</a></li>
-									<li class="dropdown"><a href="#testi" data-toggle="dropdown">Testimonial</a></li>
-									<li class="dropdown"><a href="#blog" data-toggle="dropdown">Blog</a></li>
-									<li class="dropdown"><a href="contact.html" data-toggle="dropdown">Contacts</a></li>
-								</ul>
-							</div>
-							<div class="contact-info">
-								<h2>Contact Info</h2>
-								<ul class="list-style-one">
-									<li><i class="bi bi-geo-alt-fill"></i>6391 Elgin St. Celina, Delaware</li>
-									<li><i class="bi bi-telephone-fill"></i>(+001) 123-456-789</li>
-									<li><i class="bi bi-envelope"></i> info@example.com</li>
-									<li><i class="bi bi-alarm-fill"></i> Week Days: 08.00 to 10.00
-									</li>
-								</ul>
-							</div>
-							<ul class="social-box">
-								<li class="facebook"><a href="#" class="fab fa-facebook-f"></a></li>
-								<li class="twitter"><a href="#" class="fab fa-instagram"></a></li>
-								<li class="linkedin"><a href="#" class="fab fa-twitter"></a></li>
-								<li class="instagram"><a href="#" class="fab fa-pinterest-p"></a></li>
-								<li class="youtube"><a href="#" class="fab fa-linkedin-in"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Sidebar Area -->
 	<!--==================================================-->
 
 	<!--==================================================-->

@@ -80,7 +80,7 @@ class Students(models.Model):
     id = models.AutoField(primary_key=True)
     user_type = models.OneToOneField(UserType, on_delete=models.CASCADE)
     gender = models.CharField(max_length=255)
-    profile_pic = models.FileField()
+    profile_pic = models.ImageField()
     address = models.TextField()
     course_id = models.ForeignKey(Courses, on_delete=models.DO_NOTHING)
     course_session_id = models.ForeignKey(CourseSession, on_delete=models.CASCADE)

@@ -89,11 +89,11 @@ def add_student_save(request):
             email = form.cleaned_data["email"]
             password = form.cleaned_data["password"]
             address = form.cleaned_data["address"]
-            course_session_id = form.cleaned_data["course_session_id"]
+            course_session_id = form.cleaned_data["session"]
             course_id = form.cleaned_data["course"]
             gender = form.cleaned_data["gender"]
 
-            profile_pic = request.FILES.get('profile_pic')
+            profile_pic = request.FILES.get("profile_pic")
             fs = FileSystemStorage()
             filename = fs.save(profile_pic.name, profile_pic)
             profile_pic_url = fs.url(filename)
